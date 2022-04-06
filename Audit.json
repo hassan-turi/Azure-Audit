@@ -1,0 +1,32 @@
+[
+      {
+            "Virtual_Machine": {
+                  "VM_Name": "Linux",
+                  "VM_Location": "eastus",
+                  "VM_Disk_Name": "Linux_OsDisk_1_ee5eb21dc6d44c13ad35b5b72094b4f9",
+                  "VM_Publisher_Info": {
+                        "publisher": "debian",
+                        "offer": "debian-10",
+                        "sku": "10",
+                        "version": "latest"
+                  },
+                  "Vm_Disk_Type": "Standard_D2s_v3",
+                  "VM_Encryption": null
+            }
+      },
+      {
+            "Resorce_Group": {
+                  "Group_Name": "Demo",
+                  "Group_Location": "eastus"
+            }
+      },
+      {
+            "Virtual_Networks": {
+                  "Network_Name": "Demo-vnet",
+                  "Location": "eastus",
+                  "DDOS_Protection": false,
+                  "VM_Protection": null,
+                  "DDOS_Protection_Plan": null
+            }
+      }
+]
