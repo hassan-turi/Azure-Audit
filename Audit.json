@@ -1,32 +1,120 @@
 [
-      {
-            "Virtual_Machine": {
-                  "VM_Name": "Linux",
-                  "VM_Location": "eastus",
-                  "VM_Disk_Name": "Linux_OsDisk_1_ee5eb21dc6d44c13ad35b5b72094b4f9",
-                  "VM_Publisher_Info": {
-                        "publisher": "debian",
-                        "offer": "debian-10",
-                        "sku": "10",
-                        "version": "latest"
-                  },
-                  "Vm_Disk_Type": "Standard_D2s_v3",
-                  "VM_Encryption": null
-            }
-      },
-      {
-            "Resorce_Group": {
-                  "Group_Name": "Demo",
-                  "Group_Location": "eastus"
-            }
-      },
-      {
-            "Virtual_Networks": {
-                  "Network_Name": "Demo-vnet",
-                  "Location": "eastus",
-                  "DDOS_Protection": false,
-                  "VM_Protection": null,
-                  "DDOS_Protection_Plan": null
-            }
-      }
+     {
+          "Virtual_Machines": {
+               "Debian": {
+                    "VM_Name": "Debian",
+                    "VM_Location": "eastus",
+                    "VM_Disk_Name": "Debian_OsDisk_1_b890f5f5c42647549c881c0706b85201",
+                    "VM_Publisher_Info": {
+                         "publisher": "debian",
+                         "offer": "debian-11",
+                         "sku": "11-gen2",
+                         "version": "latest"
+                    },
+                    "Vm_Disk_Type": "Standard_D2s_v3",
+                    "VM_Encryption": null
+               },
+               "Ubuntu": {
+                    "VM_Name": "Ubuntu",
+                    "VM_Location": "eastus",
+                    "VM_Disk_Name": "Ubuntu_disk1_0610e0fde49b481490ef0a069a03b460",
+                    "VM_Publisher_Info": {
+                         "publisher": "canonical",
+                         "offer": "0001-com-ubuntu-server-focal",
+                         "sku": "20_04-lts-gen2",
+                         "version": "latest"
+                    },
+                    "Vm_Disk_Type": "Standard_D2s_v3",
+                    "VM_Encryption": null
+               }
+          }
+     },
+     {
+          "Resources_Groups": {
+               "demo": {
+                    "Group_Name": "demo",
+                    "Group_Location": "eastus"
+               },
+               "NetworkWatcherRG": {
+                    "Group_Name": "NetworkWatcherRG",
+                    "Group_Location": "eastus"
+               },
+               "Ubuntu_group": {
+                    "Group_Name": "Ubuntu_group",
+                    "Group_Location": "eastus"
+               }
+          }
+     },
+     {
+          "Virtual_Networks": {
+               "demo-vnet": {
+                    "Network_Name": "demo-vnet",
+                    "Network_Type": "Microsoft.Network/virtualNetworks",
+                    "Location": "eastus",
+                    "DDOS_Protection": false,
+                    "VM_Protection": null,
+                    "DDOS_Protection_Plan": null
+               },
+               "Ubuntu_group-vnet": {
+                    "Network_Name": "Ubuntu_group-vnet",
+                    "Network_Type": "Microsoft.Network/virtualNetworks",
+                    "Location": "eastus",
+                    "DDOS_Protection": false,
+                    "VM_Protection": null,
+                    "DDOS_Protection_Plan": null
+               }
+          }
+     },
+     {
+          "Role_Base_Access_Control": {
+               "a4b7b426-cdd7-4db5-a8ed-fefc47287b24": {
+                    "Name": "a4b7b426-cdd7-4db5-a8ed-fefc47287b24",
+                    "Type": "Microsoft.Authorization/roleAssignments"
+               },
+               "5c32726c-b8fa-4d96-a5c3-a74e5595d25c": {
+                    "Name": "5c32726c-b8fa-4d96-a5c3-a74e5595d25c",
+                    "Type": "Microsoft.Authorization/roleAssignments"
+               },
+               "812b0b3b-f866-411f-88ec-7188adbf8d38": {
+                    "Name": "812b0b3b-f866-411f-88ec-7188adbf8d38",
+                    "Type": "Microsoft.Authorization/roleAssignments"
+               },
+               "b711c811-ff2b-425d-be6f-72b075c0a741": {
+                    "Name": "b711c811-ff2b-425d-be6f-72b075c0a741",
+                    "Type": "Microsoft.Authorization/roleAssignments"
+               }
+          }
+     },
+     {
+          "Key_Vaults": {
+               "VaultforKeys": {
+                    "Name": "VaultforKeys",
+                    "Location": "eastus",
+                    "Purge_Protection": true,
+                    "disk_encryption": false,
+                    "Vault_uri": "https://vaultforkeys.vault.azure.net/"
+               }
+          }
+     },
+     {
+          "Security_Center": {
+               "ascScore": {
+                    "Security_Name": "ascScore",
+                    "Max_Score": 52,
+                    "Current_Score": 4.0
+               }
+          }
+     },
+     {
+          "Storge_Accounts": {
+               "Standard_RAGZRS": "Storage_Account",
+               "Standard_LRS": "Storage_Account",
+               "Standard_RAGRS": "Storage_Account",
+               "Standard_ZRS": "Storage_Account",
+               "Standard_GRS": "Storage_Account",
+               "Premium_ZRS": "Storage_Account",
+               "Standard_GZRS": "Storage_Account",
+               "Premium_LRS": "Storage_Account"
+          }
+     }
 ]
