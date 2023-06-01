@@ -4,8 +4,7 @@ import Credentials
 import json
 from pprint import pprint
 
-# credential = ServicePrincipalCredentials(client_id='6ba20ca0-9eac-47df-a48a-69a935cf3841',
-#                                          secret='Kqh7Q~gxKhu52LTHbJyGiWGEBRff2Zcfw3O3K', tenant='75df096c-8b72-48e4-9b91-cbf79d87ee3a')
+
 compute_client = ComputeManagementClient(
     Credentials.credential, Credentials.subscription_id)
 
