@@ -18,7 +18,7 @@ sg = SecurityGroups.SecurityGroup
 sa = StorageAccount.storage
 
 
-client = MongoClient("mongodb+srv://HassanTuri:hassanturi@devconnector.g6cxh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = MongoClient("MongoDB stirng")
 db = client['Audit']
 vms = db['virtual_machine']
 
