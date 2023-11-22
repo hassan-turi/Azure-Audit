@@ -84,7 +84,7 @@ azure-storage-blob==1.5.0
 azure-storage-common==1.4.2
 azure-storage-file==1.4.0
 azure-storage-queue==1.4.0
-certifi==2021.10.8
+certifi==2023.7.22
 cffi==1.15.0
 charset-normalizer==2.0.12
 cryptography==36.0.2
